@@ -1,0 +1,62 @@
+@import './../../../base/scss/colors.scss';
+
+.parallax{
+    width: 100%;
+    padding: 150px 20px;
+    background-image: url(../../../../img/main/parallax/N220_video013_0210.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    --webkit-background-origin: inherit;
+}
+.parallax-content{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all 1s ease 0.1s;
+    transform: translateY(50%);
+    opacity: 0;
+    &__block{
+        max-width: 540px;
+        padding: 75px;
+        background: $color_global_2;
+    }
+    &__title{
+        color: #fff;
+        h6{
+            font-weight: 200;
+            line-height: 2;
+            text-transform: uppercase;
+        }
+        h2{
+            font-weight: 400;
+        }
+    }
+    &__text{
+        color: #fff;
+        p{
+            font-weight: 200;
+            line-height: 1.2;
+        }
+    }
+    &.active{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+@media screen and(max-width:478px) {
+    .parallax-content{
+        justify-content: center;
+        &__block{
+            padding: 45px;
+        }
+    }
+    .parallax{
+      background-attachment: inherit;
+    }
+}

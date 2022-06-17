@@ -1,0 +1,258 @@
+.header {
+  background: transparent;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+}
+
+.headhesive {
+  background: #0c2240;
+  width: 100%;
+  position: fixed;
+  display: block;
+  transform: translateY(-110%);
+  transition: all 0.5s;
+  z-index: 3;
+}
+
+.headhesive--stick {
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+
+.logo {
+  width: 220px;
+  height: 46px;
+  margin-right: 40px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navbar {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  background: transparent;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navmenu {
+  display: flex;
+  align-items: center;
+}
+.navmenu__item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  list-style: none;
+}
+.navmenu__item_sub:hover .sub-menu {
+  display: block;
+}
+.navmenu__item_social {
+  margin-left: 20px;
+}
+.navmenu__link {
+  color: #f1f1f1;
+  position: relative;
+  font-weight: 300;
+  padding: 10px 7px;
+}
+.navmenu__link_sub::after {
+  content: url(../../../svg/header/chevron-down.svg);
+  margin-left: 5px;
+}
+.navmenu__link_phone::before {
+  content: url(../../../svg/header/phone-incoming.svg);
+  margin-right: 5px;
+}
+.navmenu__link:hover {
+  background-color: #6da8c8;
+  transition: all 1.5s;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  top: 100%;
+  background: #f1f1f1;
+}
+.sub-menu__item {
+  padding: 10px;
+}
+.sub-menu__item:hover {
+  background: #6da8c8;
+}
+.sub-menu__item:hover .sub-menu__link {
+  color: #f1f1f1;
+}
+.sub-menu__link {
+  color: #797f8c;
+}
+
+.link-social {
+  padding: 2px;
+}
+.link-social_footer {
+  padding-right: 20px;
+}
+.link-social img {
+  width: 16px;
+  height: auto;
+}
+.link-social:nth-last-child(-n+1) {
+  margin-left: 4px;
+}
+
+.navbar-navigation {
+  position: relative;
+  height: 100%;
+  width: 50px;
+  display: none;
+}
+.navbar-navigation__btn {
+  position: absolute;
+  top: -20px;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 100000;
+}
+
+.navbar-mob {
+  display: none;
+  position: fixed;
+  right: 0;
+  width: 54%;
+  height: calc(100vh + 90px);
+  background: #0c2240;
+  transform: translateX(110%);
+  transition: all 1s;
+  box-shadow: 0px 1px 5px 0px rgba(241, 241, 241, 0.5882352941);
+}
+.navbar-mob.active {
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.navMenu-mob {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 20px;
+}
+.navMenu-mob__item {
+  padding: 5px 0;
+  width: 100%;
+  list-style: none;
+}
+.navMenu-mob__item:nth-last-child(-n+2) {
+  margin-top: 15px;
+}
+.navMenu-mob__link {
+  color: #f1f1f1;
+  position: relative;
+  font-weight: 300;
+  padding: 10px 7px;
+}
+.navMenu-mob__link:hover {
+  color: #6da8c8;
+  transition: all 0.5s;
+}
+
+.navMenu-mob-sub {
+  padding: 10px 25px;
+}
+.navMenu-mob-sub__item {
+  padding: 5px 0;
+}
+.navMenu-mob-sub__link {
+  color: #f1f1f1;
+  position: relative;
+  font-weight: 300;
+}
+.navMenu-mob-sub__link:hover {
+  color: #6da8c8;
+  transition: all 0.5s;
+}
+
+@media (max-width: 958px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navmenu {
+    display: none;
+  }
+
+  .navbar-mob {
+    display: block;
+  }
+
+  .navbar-navigation {
+    display: block;
+  }
+  .navbar-navigation__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    margin-right: 10px;
+    border: 1px solid #f1f1f1;
+  }
+  .navbar-navigation__btn span {
+    display: block;
+    position: absolute;
+    top: 23px;
+    transform: rotate(180deg);
+    height: 4px;
+    width: 25px;
+    right: 12px;
+    background: #f1f1f1;
+    transition: all 1s;
+  }
+  .navbar-navigation__btn span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    height: 4px;
+    width: 25px;
+    background: #fff;
+    transition: 1s;
+    top: 8px;
+  }
+  .navbar-navigation__btn span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    height: 4px;
+    width: 25px;
+    background: #fff;
+    transition: 1s;
+    bottom: 8px;
+  }
+
+  .headhesive {
+    transition: all 0.9s;
+  }
+
+  .headhesive--stick {
+    transition: all 0.9s;
+  }
+
+  .sub-menu {
+    position: relative;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

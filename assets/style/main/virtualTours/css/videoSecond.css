@@ -1,0 +1,108 @@
+.videoSecond {
+  width: 100%;
+  height: auto;
+  background: url(../../../../img/main/marble-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 75px 20px;
+}
+
+.videoSecond-container,
+.videoSecond-title,
+.videoSecond-text {
+  max-width: 1070px;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.videoSecond-title {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(80%);
+  transition: all 1s ease 0.2s;
+  opacity: 0;
+}
+.videoSecond-title h6 {
+  color: #797f8c;
+  line-height: 2;
+}
+.videoSecond-title h2 {
+  color: #0c1524;
+  line-height: 1;
+  font-weight: 400;
+}
+.videoSecond-title.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.videoSecond-text {
+  transform: translateY(100%);
+  transition: all 1s ease 0.4s;
+  opacity: 0;
+}
+.videoSecond-text p {
+  padding: 10px 0;
+  margin-top: 0;
+  color: #797f8c;
+  font-weight: 200;
+  line-height: 1.4;
+}
+.videoSecond-text.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.videoSecond-separator {
+  border-top: 4px solid rgba(21, 50, 67, 0.2);
+  width: 6%;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.videoSecond-content {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.videoSecond-button {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.videoSecond-button.active {
+  display: none;
+}
+
+.video-btn {
+  width: 75px;
+  height: 75px;
+}
+.video-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=videoSecond.css.map */

@@ -1,0 +1,46 @@
+.infoBox {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.infoBox-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.infoBox-content__one {
+  background: #6da8c8;
+  padding: 20px;
+}
+.infoBox-content__two {
+  background: #0c2240;
+  padding: 90px 20px;
+}
+
+.infoBox-content-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s ease 0.1s;
+}
+.infoBox-content-container h4, .infoBox-content-container h3 {
+  font-weight: 200;
+  text-align: center;
+}
+.infoBox-content-container h4 span, .infoBox-content-container h3 span {
+  color: #6da8c8;
+}
+.infoBox-content-container.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=infobox.css.map */

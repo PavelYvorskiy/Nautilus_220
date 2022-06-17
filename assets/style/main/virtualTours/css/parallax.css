@@ -1,0 +1,64 @@
+.parallax {
+  width: 100%;
+  padding: 150px 20px;
+  background-image: url(../../../../img/main/parallax/N220_video013_0210.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  --webkit-background-origin: inherit;
+}
+
+.parallax-content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 1s ease 0.1s;
+  transform: translateY(50%);
+  opacity: 0;
+}
+.parallax-content__block {
+  max-width: 540px;
+  padding: 75px;
+  background: #6da8c8;
+}
+.parallax-content__title {
+  color: #fff;
+}
+.parallax-content__title h6 {
+  font-weight: 200;
+  line-height: 2;
+  text-transform: uppercase;
+}
+.parallax-content__title h2 {
+  font-weight: 400;
+}
+.parallax-content__text {
+  color: #fff;
+}
+.parallax-content__text p {
+  font-weight: 200;
+  line-height: 1.2;
+}
+.parallax-content.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media screen and (max-width: 478px) {
+  .parallax-content {
+    justify-content: center;
+  }
+  .parallax-content__block {
+    padding: 45px;
+  }
+
+  .parallax {
+    background-attachment: inherit;
+  }
+}
+
+/*# sourceMappingURL=parallax.css.map */

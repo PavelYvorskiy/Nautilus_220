@@ -1,0 +1,185 @@
+@import '../../../base/scss/colors.scss';
+
+.chef{
+  padding: 90px 0 20px ;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chef-container{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+
+}
+.chef-block{
+    display: flex;
+    flex: 1 1 auto;
+    align-self: stretch;
+    width: 50%;
+}
+.chef-block-poster{
+    min-height: 650px;
+    width: 100%;
+    background-image: url(https://nautilus220.com/wp-content/uploads/2022/04/Chef_Burke_Headshot_.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    transform: translateX(-70%);
+    transition: all 1s ease 0.1s;
+    opacity: 0;
+    &.active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.chef-gallery{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chef-block-info{
+    width: 100%;
+    padding: 10% 35% 10% 10%;
+    transform: scale(0.5);
+    transition: all 1s ease 0.2s;
+    opacity: 0;
+    &__content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title{
+      h4{
+        color: $color_global_2;
+        font-weight: 200;
+        line-height: 1.5;
+      }
+    }
+    &__logo{
+        width: 100%;
+        padding: 20px 0;
+        img{
+            width: 300px;
+        }
+    }
+    &__text{
+        h5{
+            color: $color_global_2;
+            font-weight: 400;
+            margin: 10px 0;
+        }
+        p{
+            padding: 5px 10px;
+            b{
+                color: $color_global_2;
+                margin-right: 5px;
+            }
+        }
+
+    }
+    &__link{
+        padding: 15px 0;
+        span{
+            font-size: 18px;
+            a{
+                color: $color_global_2;
+              
+            }
+            b{
+                margin: 0 5px;
+                color: $color_global_2;
+            }
+        }
+    }
+    &.active{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.chef-gallery-title{
+    margin: 3% 25%;
+    h4{
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+.chef-gallery-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    &__items{
+        padding: 0 3px;
+        &_1{
+            width: 20%;
+        }
+        &_2{
+            width: 20%;
+        }
+        &_3{
+            width: 20%;
+        }
+        &_4{
+            width: 40%;
+        }
+       img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+    }
+}
+@media screen and(max-width:968px){
+    .chef-container{
+        flex-direction: column;
+    }
+    .chef-block{
+        width: 100%;
+    }
+    .chef-block-info{
+        padding: 30px;
+    }
+    .chef-block-poster{
+        min-height: 400px;
+    }
+    
+}
+@media screen and(max-width:767px){
+    .chef-block-poster{
+        min-height: 300px;
+    }
+    .chef-gallery-title{
+        margin: 20px;
+      
+    }
+    .chef-gallery-content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        &__items{
+            padding: 3px;
+            &_1{
+                width: 33.3%;
+            }
+            &_2{
+                width: 33.3%;
+            }
+            &_3{
+                width: 33.3%;
+            }
+            &_4{
+                width: 100%;
+            }
+        }
+    }
+}

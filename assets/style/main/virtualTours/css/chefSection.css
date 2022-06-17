@@ -1,0 +1,189 @@
+.chef {
+  padding: 90px 0 20px;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chef-container {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+}
+
+.chef-block {
+  display: flex;
+  flex: 1 1 auto;
+  align-self: stretch;
+  width: 50%;
+}
+
+.chef-block-poster {
+  min-height: 650px;
+  width: 100%;
+  background-image: url(https://nautilus220.com/wp-content/uploads/2022/04/Chef_Burke_Headshot_.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  transform: translateX(-70%);
+  transition: all 1s ease 0.1s;
+  opacity: 0;
+}
+.chef-block-poster.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.chef-gallery {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chef-block-info {
+  width: 100%;
+  padding: 10% 35% 10% 10%;
+  transform: scale(0.5);
+  transition: all 1s ease 0.2s;
+  opacity: 0;
+}
+.chef-block-info__content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.chef-block-info__title h4 {
+  color: #6da8c8;
+  font-weight: 200;
+  line-height: 1.5;
+}
+.chef-block-info__logo {
+  width: 100%;
+  padding: 20px 0;
+}
+.chef-block-info__logo img {
+  width: 300px;
+}
+.chef-block-info__text h5 {
+  color: #6da8c8;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.chef-block-info__text p {
+  padding: 5px 10px;
+}
+.chef-block-info__text p b {
+  color: #6da8c8;
+  margin-right: 5px;
+}
+.chef-block-info__link {
+  padding: 15px 0;
+}
+.chef-block-info__link span {
+  font-size: 18px;
+}
+.chef-block-info__link span a {
+  color: #6da8c8;
+}
+.chef-block-info__link span b {
+  margin: 0 5px;
+  color: #6da8c8;
+}
+.chef-block-info.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.chef-gallery-title {
+  margin: 3% 25%;
+}
+.chef-gallery-title h4 {
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.chef-gallery-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.chef-gallery-content__items {
+  padding: 0 3px;
+}
+.chef-gallery-content__items_1 {
+  width: 20%;
+}
+.chef-gallery-content__items_2 {
+  width: 20%;
+}
+.chef-gallery-content__items_3 {
+  width: 20%;
+}
+.chef-gallery-content__items_4 {
+  width: 40%;
+}
+.chef-gallery-content__items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 968px) {
+  .chef-container {
+    flex-direction: column;
+  }
+
+  .chef-block {
+    width: 100%;
+  }
+
+  .chef-block-info {
+    padding: 30px;
+  }
+
+  .chef-block-poster {
+    min-height: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .chef-block-poster {
+    min-height: 300px;
+  }
+
+  .chef-gallery-title {
+    margin: 20px;
+  }
+
+  .chef-gallery-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .chef-gallery-content__items {
+    padding: 3px;
+  }
+  .chef-gallery-content__items_1 {
+    width: 33.3%;
+  }
+  .chef-gallery-content__items_2 {
+    width: 33.3%;
+  }
+  .chef-gallery-content__items_3 {
+    width: 33.3%;
+  }
+  .chef-gallery-content__items_4 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=chefSection.css.map */

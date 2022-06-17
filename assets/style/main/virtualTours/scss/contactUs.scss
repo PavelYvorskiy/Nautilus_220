@@ -1,0 +1,279 @@
+@import './../../../base/scss/colors.scss';
+@mixin logoContactUs {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    left: 0px;
+}
+
+.contactUs{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+.contactUs-container{
+    width: 100%;
+    display: flex;
+}
+.contactUs-block{
+    display: flex;
+    flex: 1 1 auto;
+    align-self: stretch;
+    width: 50%;
+}
+.contactUs-block-poster{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    transform: translateX(-70%);
+    transition: all 1s ease 0.1s;
+    opacity: 0;
+    position: relative;
+    padding: 60px;
+    &_homePage{
+        background-image: url(https://nautilus220.com/wp-content/uploads/2020/06/founding-member.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: scroll;
+        background-size: cover;
+        min-height: 650px;
+    }
+    &_contactUs{
+       background:  url(../../../../img/main/contactUs/gallery-2.webp) ;
+       background-repeat: no-repeat;
+       background-position: center center;
+       background-attachment: scroll;
+       background-size: cover;
+       &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255,255,255,0.9);
+       }
+    }
+    &.active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.contactUs-block-poster-content{
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+.contactUs-block-poster-title{
+    // margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(80%);
+    transition: all 1s ease 0.2s;
+    opacity: 0;
+    h6{
+        color: $color_global_3;
+        line-height: 2;
+
+    }
+    h2{
+        color: $color_global_4;
+        line-height: 1;
+        font-weight: 400;
+    }
+    &.active{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.contactUs-block-poster-separator{
+    border-top: 4px solid rgba(21,50,67,0.2);
+    width: 6%;
+    display: inline-block;
+    margin: 20px 0;
+
+}
+.contactUs-block-poster-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    &__item{
+        position: relative;
+        margin: 10px 0;
+        padding: 10px 40px 10px 60px;
+         &_location{
+            &::before{
+                content: url(../../../../svg/main/contactUs/location-marker.svg);
+                @include logoContactUs();
+            }
+         }
+         &_mail{
+            &::before{
+                content: url(../../../../svg/main/contactUs/mail.svg);
+                @include logoContactUs();
+            }
+         }
+         &_phone{
+            &::before{
+                content: url(../../../../svg/main/contactUs/phone.svg);
+                @include logoContactUs();
+            }
+         }
+         a{
+            color: $color_global_4;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.5;
+         }
+    }
+}
+.contactUs-block-poster-text{
+
+    h5{
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    p{
+        padding: 10px 0;
+        margin-top: 0;
+        color: $color_global_3;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+}
+.contactUs-block-poster-fallowUs{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    &__title{
+        h4{
+            font-weight: 400;
+        }
+
+    }
+    &__links{
+        display: flex;
+        a{
+            width: 50px;
+            height: 50px;
+            margin:20px 10px 20px 0;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.contactUs-block-forms{
+    padding: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.contactUs-block-title{
+    display: flex;
+    flex-direction: column;
+    &__title{
+        display: flex;
+        flex-direction: column;
+        transform: translateY(80%);
+        transition: all 1s ease 0.2s;
+        opacity: 0;
+        h6{
+            color: $color_global_3;
+            line-height: 2;
+    
+        }
+        h2{
+            color: $color_global_4;
+            line-height: 1;
+            font-weight: 400;
+        }
+        h4{
+            color: $color_global_4;
+            line-height: 1;
+            font-weight: 400;
+            margin: 30px 0;
+        }
+        &.active{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    &__text{
+        margin-top: 0;
+        color: $color_global_3;
+        font-weight: 200;
+        line-height: 1.4;
+        transform: translateY(100%);
+        transition: all 1s ease 0.4s;
+        opacity: 0;
+        p{
+            padding: 10px 0;
+        }
+        &.active{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+   
+}
+@media screen and(max-width:1169px) {
+    .contactUs-container{
+       flex-direction: column;
+    }
+    .contactUs-block{
+        width: 100%;
+    }
+    .contactUs-block-poster{
+      &_homePage{
+        min-height: 550px;  
+      }  
+    }
+    .contactUs-block-forms{
+        padding: 30px;
+      
+        
+    }
+}
+@media screen and(max-width:969px){
+    .contactUs-block-poster{
+        &_homePage{
+            min-height: 450px;  
+          }     
+     }
+}
+@media screen and(max-width:621px) {
+    .contactUs-block-poster{
+        
+        padding: 40px 40px 150px 40px; 
+        &_homePage{
+            min-height: 350px;  
+          }     
+     }
+}
+@media screen and(max-width:467px) {
+    .contactUs-block-poster{
+        padding: 40px 20px 150px 40px;   
+        &_homePage{
+            min-height: 250px;  
+          }     
+     }
+     .contactUs-block-poster-box{
+        &__item{
+             a{
+              font-size: 16px;
+             }
+        }
+    }
+}

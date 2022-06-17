@@ -1,0 +1,44 @@
+@import '../../../base/scss/colors.scss';
+
+.infoBox{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.infoBox-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    &__one{
+        background: $color_global_2;
+        padding: 20px;
+    }
+    &__two{
+        background: $color_global_1;
+        padding: 90px 20px;
+    }
+}
+.infoBox-content-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s ease 0.1s;
+    h4,h3{
+        font-weight: 200;
+        text-align: center;
+        span{
+            color: $color_global_2;
+        }
+    }
+    &.active{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

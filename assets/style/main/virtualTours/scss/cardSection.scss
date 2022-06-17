@@ -1,0 +1,164 @@
+@import './../../../base/scss/colors.scss';
+
+.card{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #fff;
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.card-titleBox{
+    width: 100%;
+    height: auto;
+    background:url(https://nautilus220.com/wp-content/uploads/2020/03/rsw_1300h_800-7.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 150px 0 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(12,34,64,0.81);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    }
+}
+.card-title{
+    max-width: 625px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h6{
+            color: $color-global_2;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        h2{
+            font-weight: 400;
+            color: #fff;
+            margin-top: 20px;
+        }
+    }
+    &__text{
+            p{
+             color: #ffffffb3;
+             text-align: center;
+             line-height: 1.4;
+             
+            }
+    }
+}
+.card-title-separator{
+    border-top: 4px solid rgba(255,255,255,0.2);
+    width: 10%;
+    display: inline-block;
+    margin: 20px 0;
+}
+.card-content{
+    max-width: 1170px;
+    width: 100%;
+    background-color: transparent;
+    margin-top: -200px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    &__items{
+        width: 25%;
+        padding: 10px;
+        // height: 350px;
+        background: transparent;
+        padding: 20px;
+        transform: translateY(70%);
+        opacity: 0;
+        &_1{
+            transition: all 1s ease 0.2s;
+        }
+        &_2{
+            transition: all 1s ease 0.6s;
+        }
+        &_3{
+            transition: all 1s ease 1s;
+        }
+        &_4{
+            transition: all 1s ease 1.4s;
+        }
+        &.active{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    &__item{
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 15%);
+    }
+    &__textBlock{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px;
+        text-align: center;
+        h5{
+            font-weight: 400;
+            margin: 40px 0;
+        }
+        p{
+            color: $color_global_5;
+            line-height: 1.5;
+            font-weight: 300;
+            padding-bottom: 10px;
+        }
+        a{
+            color: $color-global_2;
+        }
+
+
+    }
+}
+@media screen and(max-width:958px) {
+    .card-content{
+        &__items{
+            width: 50%;
+            // height: 250px;
+        }
+        &__textBlock{
+            h5{
+                margin: 20px 0;
+            }
+        }
+    }
+}
+@media screen and(max-width:736px) {
+    .card-content{
+        &__items{
+            width: 100%;
+            padding: 5px 20px;
+        }
+    }
+}

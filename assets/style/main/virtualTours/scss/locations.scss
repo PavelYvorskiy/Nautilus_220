@@ -1,0 +1,35 @@
+@import './../../../base/scss/colors.scss';
+
+.localions{
+    width: 100%;
+    background: #fff;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 80px;
+}
+.locations-content{
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    &__title{
+        text-align: center;
+        margin-bottom: 20px;
+        h5{
+            font-size: 30px;
+            font-weight: 400;
+        }
+    }
+    &__text{
+        p{
+            color: $color_global_5;
+            text-align: center;
+            line-height: 1.5;
+        }
+    }
+}
