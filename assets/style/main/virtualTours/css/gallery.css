@@ -179,10 +179,6 @@
   .content_slider {
     padding: 10%;
   }
-
-  .content_slider-box {
-    height: 50%;
-  }
 }
 @media screen and (max-width: 578px) {
   .content_slider-box {
